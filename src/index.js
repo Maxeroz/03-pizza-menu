@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+console.log(React);
+console.log(ReactDOM);
+
 function App() {
   return <h1>Hello React!</h1>;
 }
@@ -14,4 +17,4 @@ root.render(
 );
 
 // React before 18
-// React.render(<App />);
+// ReactDOM.render(<App />, document.getElementById("root"));
