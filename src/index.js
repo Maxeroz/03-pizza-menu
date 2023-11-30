@@ -78,3 +78,5 @@ root.render(
 // React before 18
 // ReactDOM.render(<App />, document.getElementById("root"));
 // Components as Building Blocks
+// Creating And Reusing a Component
+// What is JSX?
