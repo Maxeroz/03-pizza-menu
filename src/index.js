@@ -49,12 +49,33 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <h1>Hello React!</h1>
+      <Header />
+      <Menu />
+      <Footer />
+    </div>
+  );
+}
+
+function Header() {
+  return <h1>Fast React Pizza Co.</h1>;
+}
+
+function Menu() {
+  return (
+    <div>
+      <h2>Our menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
     </div>
   );
+}
+
+function Footer() {
+  return (
+    <footer>{new Date().toLocaleTimeString()}. We're currently open!</footer>
+  );
+  // return React.createElement("footer", null, "We're currently open!");
 }
 
 function Pizza() {
@@ -75,8 +96,11 @@ root.render(
   </React.StrictMode>
 );
 
+console.log(root);
+
 // React before 18
 // ReactDOM.render(<App />, document.getElementById("root"));
 // Components as Building Blocks
 // Creating And Reusing a Component
 // What is JSX?
+// Creating More Components
