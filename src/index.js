@@ -112,3 +112,4 @@ root.render(
 // What is JSX?
 // Creating More Components
 // JavaScript Logic in Components
+// Separation of Concerns
