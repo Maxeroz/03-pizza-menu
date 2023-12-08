@@ -135,3 +135,6 @@ root.render(
 // Creating More Components
 // JavaScript Logic in Components
 // Separation of Concerns
+// Styling React Applications
+// Passing and Receiving Props
+// Props, Immutability, and One-Way Data Flow
