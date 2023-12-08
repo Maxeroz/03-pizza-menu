@@ -138,3 +138,4 @@ root.render(
 // Styling React Applications
 // Passing and Receiving Props
 // Props, Immutability, and One-Way Data Flow
+// CHALLENGE #1: Profile Card (v1)
