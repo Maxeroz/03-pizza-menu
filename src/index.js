@@ -69,15 +69,21 @@ function Header() {
 }
 
 function Menu() {
+  // const pizzas = pizzaData;
+  const pizzas = [];
+  const numPizzas = pizzas.length;
+
   return (
     <main className="menu">
       <h2>Our menu</h2>
 
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza pizzaObg={pizza} key={pizza.name} />
-        ))}
-      </ul>
+      {numPizzas > 0 && (
+        <ul className="pizzas">
+          {pizzas.map((pizza) => (
+            <Pizza pizzaObg={pizza} key={pizza.name} />
+          ))}
+        </ul>
+      )}
     </main>
   );
 }
@@ -106,7 +112,12 @@ function Footer() {
 
   return (
     <footer className="footer">
-      {new Date().toLocaleTimeString()}. We're currently open!
+      {isOpen && (
+        <div className="order">
+          <p>We're open until {closeHour}:00. Come visit us or order online.</p>
+          <button className="btn">Order</button>
+        </div>
+      )}
     </footer>
   );
   // return React.createElement("footer", null, "We're currently open!");
@@ -133,3 +144,5 @@ root.render(
 // Props, Immutability, and One-Way Data Flow
 // CHALLENGE #1: Profile Card (v1)
 // The Rules of JSX
+// Rendering Lists
+// Conditional Rendering With &&
