@@ -91,6 +91,7 @@ function Menu() {
 }
 
 function Pizza(props) {
+  if (props.pizzaObg.soldOut) return null;
   return (
     <li className="pizza">
       <img src={props.pizzaObg.photoName} alt={props.pizzaObg.name} />
@@ -111,6 +112,8 @@ function Footer() {
 
   // if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
   // else alert("Sorry, we're closed!");
+
+  if (!isOpen) return <p>CLOSED</p>;
 
   return (
     <footer className="footer">
@@ -153,3 +156,4 @@ root.render(
 // Rendering Lists
 // Conditional Rendering With &&
 // Conditional Rendering With Ternaries
+// Conditional Rendering With Multiple Returns
