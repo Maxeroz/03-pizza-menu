@@ -78,11 +78,18 @@ function Menu() {
       <h2>Our menu</h2>
 
       {numPizzas > 0 ? (
-        <ul className="pizzas">
-          {pizzas.map((pizza) => (
-            <Pizza pizzaObg={pizza} key={pizza.name} />
-          ))}
-        </ul>
+        <>
+          <p>
+            Authentical Italian cuisine. 6 creative dishes to choose from. All
+            from our stone oven, all organic, all delicious.
+          </p>
+
+          <ul className="pizzas">
+            {pizzas.map((pizza) => (
+              <Pizza pizzaObg={pizza} key={pizza.name} />
+            ))}
+          </ul>
+        </>
       ) : (
         <p>We're still working on our menu. Please come back later :)</p>
       )}
@@ -91,14 +98,14 @@ function Menu() {
 }
 
 function Pizza({ pizzaObg }) {
-  if (pizzaObg.soldOut) return null;
+  // if (pizzaObg.soldOut) return null;
   return (
-    <li className="pizza">
+    <li className={`pizza ${pizzaObg.soldOut ? "sold-out" : ""}`}>
       <img src={pizzaObg.photoName} alt={pizzaObg.name} />
       <div>
         <h3>{pizzaObg.name}</h3>
         <p>{pizzaObg.ingredients}</p>
-        <span>{pizzaObg.price}</span>
+        <span>{pizzaObg.soldOut ? "SOLD OUT" : pizzaObg.price}</span>
       </div>
     </li>
   );
@@ -167,3 +174,4 @@ root.render(
 // Conditional Rendering With Ternaries
 // Conditional Rendering With Multiple Returns
 // Extracting JSX Into a New Component
+// Setting Classes and Text Conditionally
