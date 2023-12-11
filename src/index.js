@@ -120,7 +120,7 @@ function Footer() {
   // if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
   // else alert("Sorry, we're closed!");
 
-  if (!isOpen) return <p>CLOSED</p>;
+  // if (!isOpen) return <p>CLOSED</p>;
 
   return (
     <footer className="footer">
@@ -175,3 +175,4 @@ root.render(
 // Conditional Rendering With Multiple Returns
 // Extracting JSX Into a New Component
 // Setting Classes and Text Conditionally
+// Section Summary
